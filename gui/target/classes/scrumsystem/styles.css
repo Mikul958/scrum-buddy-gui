@@ -1,0 +1,12 @@
+.root{
+    -fx-font-size: 16pt;
+    -fx-font-family: "Helvetica";
+    -fx-base: grey;
+    -fx-background: orange;
+
+}
+
+.button{ 
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}

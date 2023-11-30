@@ -1,4 +1,4 @@
-package com.example;
+package scrumsystem;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
