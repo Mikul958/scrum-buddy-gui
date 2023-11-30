@@ -1,0 +1,13 @@
+.root{
+    -fx-font-size: 16pt;
+    -fx-font-family: "Ariel";
+    -fx-base: blue;
+    -fx-background: red;
+
+}
+
+.button {
+    -fx-background-color: grey;
+    -fx-text-fill: white;
+    
+}
