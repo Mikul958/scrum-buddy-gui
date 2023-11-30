@@ -1,7 +1,7 @@
-module com.example {
+module scrumsystem {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens com.example to javafx.fxml;
-    exports com.example;
+    opens scrumsystem to javafx.fxml;
+    exports scrumsystem;
 }
