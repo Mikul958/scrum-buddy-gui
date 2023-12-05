@@ -2,11 +2,11 @@
     -fx-font-size: 16pt;
     -fx-font-family: "Helvetica";
     -fx-base: grey;
-    -fx-background: orange;
+    -fx-background: rgb(105, 47, 47);
 
 }
 
 .button{ 
-    -fx-background-color: green;
+    -fx-background-color: black;
     -fx-text-fill: white;
-}
+} 

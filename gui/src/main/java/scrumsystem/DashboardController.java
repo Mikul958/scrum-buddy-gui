@@ -21,5 +21,7 @@ public class DashboardController implements Initializable {
         ScrumSystem system = ScrumSystem.getInstance();
         lbl_username.setText(system.getCurrentAccount().getUsername());
     }
+
+    
     
 }
