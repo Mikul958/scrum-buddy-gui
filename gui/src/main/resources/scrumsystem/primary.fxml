@@ -14,10 +14,11 @@
       <Label prefHeight="94.0" prefWidth="254.0" text="Welcome to Scrum Buddy!" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="   Enter your usename" wrappingWidth="234.55418169498444" />
-      <TextField fx:id="txt_username_box" text="apacicco" />
+      <TextField fx:id="txt_username_box" text="" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your password" />
-      <PasswordField fx:id="txt_password_box" text="pacino" />
+      <PasswordField fx:id="txt_password_box" text="" />
       <Button fx:id="primaryButton" onAction="#goToDashboard" text="Login" />
+      <Button mnemonicParsing="false" onAction="#goToSignUp" text="Sign Up" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>

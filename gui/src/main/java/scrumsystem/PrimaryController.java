@@ -1,15 +1,18 @@
 package scrumsystem;
 
 import java.io.IOException;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import model.*;
 
 public class PrimaryController {
 
 
-     @FXML
+    @FXML
     private PasswordField txt_password_box;
 
     @FXML
@@ -30,5 +33,10 @@ public class PrimaryController {
         App.setRoot("dashboard");
     }
 
+    @FXML
+    void goToSignUp() throws IOException
+    {
+        App.setRoot("signup");
+    }
    
 }

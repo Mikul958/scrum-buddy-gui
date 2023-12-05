@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -21,7 +22,5 @@ public class DashboardController implements Initializable {
         ScrumSystem system = ScrumSystem.getInstance();
         lbl_username.setText(system.getCurrentAccount().getUsername());
     }
-
-    
     
 }
