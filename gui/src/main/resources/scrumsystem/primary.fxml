@@ -18,6 +18,7 @@
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your password" />
       <PasswordField fx:id="txt_password_box" text="pacino" />
       <Button fx:id="primaryButton" onAction="#goToDashboard" text="Login" />
+      <Button mnemonicParsing="false" onAction="#goToSignUp" text="Sign Up" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>
