@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -20,6 +21,12 @@ public class DashboardController implements Initializable {
     public void initialize(URL arg0, ResourceBundle arg1) {
         ScrumSystem system = ScrumSystem.getInstance();
         lbl_username.setText(system.getCurrentAccount().getUsername());
+    }
+
+    @FXML
+    void logOutUser() throws IOException {
+        ScrumSystem.getInstance().logout();
+        App.setRoot("primary");
     }
     
 }
