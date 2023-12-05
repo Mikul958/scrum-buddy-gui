@@ -13,7 +13,7 @@ public abstract class DataConstants
     protected static final DateTimeFormatter TIME_FORMAT = DateTimeFormatter.ofPattern("yyyy/MM/dd 'at' HH:mm:ss");
     
     // Accounts.json
-    protected static final String ACCOUNTS_FILE = "src/main/java/data/Accounts.json";
+    protected static final String ACCOUNTS_FILE = "gui/src/main/java/data/Accounts.json";
     protected static final String USERNAME = "username";
     protected static final String PASSWORD = "password";
     protected static final String EMAIL = "email";
@@ -22,7 +22,7 @@ public abstract class DataConstants
 
 
     // Projects.json
-    protected static final String PROJECTS_FILE = "src/main/java/data/Projects.json";
+    protected static final String PROJECTS_FILE = "gui/src/main/java/data/Projects.json";
     protected static final String PROJECT_ID = "pUUID";
     protected static final String PROJECT_TITLE = "title";
     protected static final String PROJECT_CATEGORY = "category";
@@ -39,7 +39,7 @@ public abstract class DataConstants
 
 
     // Tasks.json
-    protected static final String TASKS_FILE = "src/main/java/data/Tasks.json";
+    protected static final String TASKS_FILE = "gui/src/main/java/data/Tasks.json";
     protected static final String TASK_ID = "tUUID";
     protected static final String TASK_TYPE = "type";
     protected static final String TASK_NAME = "name";

@@ -12,11 +12,20 @@ public class ScrumSystem
     private ProjectManager projectManager;
     private Account currentAccount;
     private Project currentProject;
+    private static ScrumSystem system;
 
-    public ScrumSystem()
+    private ScrumSystem()
     {
         accountManager = AccountManager.getInstance();
         projectManager = ProjectManager.getInstance();
+    }
+
+    public static ScrumSystem getInstance() {
+        if(system == null){
+            system = new ScrumSystem();
+        }
+
+        return system;
     }
 
     // Accessors
