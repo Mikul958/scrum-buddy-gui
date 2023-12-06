@@ -45,7 +45,7 @@ public class DashboardController implements Initializable
                     system.openProject(project);
                     System.out.println("Opened " + system.getCurrentProject().getTitle());  // TODO App.setRoot
                     try {
-                        App.setRoot("projects");
+                        App.setRoot("project");
                     }
                     catch (IOException e) {
                         e.printStackTrace();

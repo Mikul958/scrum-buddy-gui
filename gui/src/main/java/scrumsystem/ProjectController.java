@@ -8,7 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import model.ScrumSystem;
 
-public class ProjectsController implements Initializable
+public class ProjectController implements Initializable
 {
     @FXML
     private Label totalTasks;
