@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 
 import model.*;
 
@@ -16,6 +17,9 @@ public class SignUpController
 
     @FXML
     private PasswordField textPassword, textPasswordConfirm;
+
+    @FXML
+    private Label errorBox;
 
     @FXML
     void backToLogin() throws IOException
@@ -30,7 +34,8 @@ public class SignUpController
         String passwordConfirm = textPasswordConfirm.getText();
         if (!password.equals(passwordConfirm))
         {
-            // TODO make text box with confirm password error.
+            errorBox.setText("*Password and Confirm Password do not match");
+            errorBox.setVisible(true);
             return;
         }
         String username = textUsername.getText();
@@ -46,7 +51,8 @@ public class SignUpController
         }
         else
         {
-            // TODO make text box with general error
+            errorBox.setText("*Invalid credentials entered or username already taken");
+            errorBox.setVisible(true);
         }
     }
 }

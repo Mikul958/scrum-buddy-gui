@@ -22,6 +22,11 @@
       <TextField fx:id="txt_username_box" text="" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your password" />
       <PasswordField fx:id="txt_password_box" text="" />
+      <Label fx:id="errorBox" text="ERROR_LOGIN" visible="false">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
       <FlowPane alignment="TOP_CENTER" hgap="20.0" prefHeight="200.0" prefWidth="200.0">
          <children>
             <Button mnemonicParsing="false" onAction="#goToSignUp" text="Sign Up" />

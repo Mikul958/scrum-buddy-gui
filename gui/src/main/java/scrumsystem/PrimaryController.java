@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import model.*;
 
@@ -18,6 +19,9 @@ public class PrimaryController
     private TextField txt_username_box;
 
     @FXML
+    private Label errorBox;
+
+    @FXML
     private void goToDashboard() throws IOException {
 
         ScrumSystem system = ScrumSystem.getInstance();
@@ -26,7 +30,8 @@ public class PrimaryController
 
         if (!system.login(userName, password))
         {
-            System.out.println("Error logging in");
+            errorBox.setText("*Incorrect username or password");
+            errorBox.setVisible(true);
             return;
         }
         App.setRoot("dashboard");
