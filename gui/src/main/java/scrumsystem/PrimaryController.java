@@ -9,9 +9,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import model.*;
 
-public class PrimaryController {
-
-
+public class PrimaryController
+{
     @FXML
     private PasswordField txt_password_box;
 
@@ -25,18 +24,17 @@ public class PrimaryController {
         String userName = txt_username_box.getText();
         String password = txt_password_box.getText();
 
-        if(!system.login(userName, password)){
+        if (!system.login(userName, password))
+        {
             System.out.println("Error logging in");
             return;
         }
-
         App.setRoot("dashboard");
     }
 
     @FXML
-    void goToSignUp() throws IOException
+    private void goToSignUp() throws IOException
     {
         App.setRoot("signup");
     }
-   
 }
