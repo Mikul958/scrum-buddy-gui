@@ -21,32 +21,33 @@ public class DashboardController implements Initializable
 {   
     @FXML
     VBox projectVBox;
-    
-    ScrumSystem system = ScrumSystem.getInstance();
-    ArrayList<Project> currentProjects = system.getCurrentAccountProjects();
 
     @FXML
-    private Label lbl_username;
+    private Label dashboardHeader;
 
     @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
+    public void initialize(URL arg0, ResourceBundle arg1)
+    {
         ScrumSystem system = ScrumSystem.getInstance();
-        lbl_username.setText("Dashboard");
+        ArrayList<Project> currentProjects = system.getCurrentAccountProjects();
+        dashboardHeader.setText("Welcome, " + system.getCurrentAccount().getFirstName() + "!");
         for (int i=0; i<currentProjects.size(); i++)
         {
-            HBox project = new HBox();
-            projectVBox.getChildren().add(project);
+            Project project = currentProjects.get(i);
+            HBox projectBox = new HBox();
+            projectVBox.getChildren().add(projectBox);
 
             Label label = new Label();
             label.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
-                public void handle(MouseEvent event) {
-                    System.out.println(label.getText() + " is clicked");
+                public void handle(MouseEvent event)
+                {
+                    system.openProject(project);
+                    System.out.println("Opened " + system.getCurrentProject().getTitle());  // TODO App.setRoot
                 }
-                
             });
             label.setText(currentProjects.get(i).getTitle());
-            project.getChildren().add(label);
+            projectBox.getChildren().add(label);
         }
     }
     
