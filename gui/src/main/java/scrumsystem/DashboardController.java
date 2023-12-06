@@ -24,7 +24,7 @@ public class DashboardController implements Initializable {
     }
     
     @FXML
-    private void backToLogin() throws IOException
+    private void logout() throws IOException
     {
         ScrumSystem.getInstance().saveData();
         ScrumSystem.getInstance().logout();
