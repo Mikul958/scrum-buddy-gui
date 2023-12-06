@@ -8,14 +8,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import model.ScrumSystem;
 
-public class ProjectsController implements Initializable{
-     @FXML
-    private Label lbl_specific_project;
+public class ProjectsController implements Initializable
+{
+    @FXML
+    private Label totalTasks;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         ScrumSystem project = ScrumSystem.getInstance();
         System.out.println("in here");
-        lbl_specific_project.setText("" + project.getCurrentProject().getTotalTasks());
+        totalTasks.setText("" + project.getCurrentProject().getTotalTasks());
     }
 }
