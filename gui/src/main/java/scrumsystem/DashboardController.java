@@ -23,4 +23,11 @@ public class DashboardController implements Initializable {
         lbl_username.setText(system.getCurrentAccount().getUsername());
     }
     
+    @FXML
+    private void backToLogin() throws IOException
+    {
+        ScrumSystem.getInstance().saveData();
+        ScrumSystem.getInstance().logout();
+        App.setRoot("primary");
+    }
 }
