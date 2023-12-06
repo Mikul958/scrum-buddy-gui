@@ -20,11 +20,10 @@ public class ScrumSystem
         projectManager = ProjectManager.getInstance();
     }
 
-    public static ScrumSystem getInstance() {
-        if(system == null){
+    public static ScrumSystem getInstance()
+    {
+        if (system == null)
             system = new ScrumSystem();
-        }
-
         return system;
     }
 
