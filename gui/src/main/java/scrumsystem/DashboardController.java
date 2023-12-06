@@ -22,10 +22,11 @@ public class DashboardController implements Initializable
     @FXML
     private Label dashboardHeader;
 
+    ScrumSystem system = ScrumSystem.getInstance();
+    
     @Override
     public void initialize(URL arg0, ResourceBundle arg1)
     {
-        ScrumSystem system = ScrumSystem.getInstance();
         ArrayList<Project> currentProjects = system.getCurrentAccountProjects();
         dashboardHeader.setText("Welcome, " + system.getCurrentAccount().getFirstName() + "!");
         for (int i=0; i<currentProjects.size(); i++)

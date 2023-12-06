@@ -18,37 +18,34 @@ import model.*;
 public class ProjectController implements Initializable
 {
     @FXML
-    private Label totalTasks;
+    private Label projectTitle, totalTasks;
+
     @FXML
-    private Label projectName;
-    @FXML
-    VBox columnVBox;
+    HBox columnsHBox;
+
+    ScrumSystem system = ScrumSystem.getInstance();
 
     @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-        ScrumSystem system = ScrumSystem.getInstance();
-        totalTasks.setText("Number of tasks: " + system.getCurrentProject().getTotalTasks());
-        projectName.setText("Project: " + system.getCurrentProject().getTitle());
+    public void initialize(URL arg0, ResourceBundle arg1)
+    {
+        Project currentProject = system.getCurrentProject();
+        projectTitle.setText("Project: " + currentProject.getTitle());
+        totalTasks.setText("Number of tasks: " + currentProject.getTotalTasks());
 
-        for(int i = 0; i < system.getCurrentProject().getColumns().size(); i++){
-            Column column = system.getCurrentProject().getColumns().get(i);
-            HBox columnHBox = new HBox();
-            columnVBox.getChildren().add(columnHBox);
+        for(int i = 0; i < currentProject.getColumns().size(); i++)
+        {
+            // Create VBox for current column and add it to outer HBox
+            Column column = currentProject.getColumns().get(i);
+            VBox columnVBox = new VBox();
+            columnsHBox.getChildren().add(columnVBox);
 
-            Label label = new Label();
+            // Add title to column.
+            Label columnTitle = new Label();
+            columnTitle.setText(column.getTitle());
+            columnVBox.getChildren().add(columnTitle);
 
-            label.setOnMouseClicked(new EventHandler<MouseEvent>() {
-
-                @Override
-                public void handle(MouseEvent event) {
-                    //TODO
-                }
-                
-            });
-            label.setText(system.getCurrentProject().getColumns().get(i).getTitle());
-            columnHBox.getChildren().add(label);
+            // Todo add task HBoxes to column, use inner for-loop.
         }
-
     }
 
     @FXML
