@@ -2,15 +2,18 @@
 
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
 <VBox alignment="CENTER" prefHeight="432.0" prefWidth="540.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrumsystem.ProjectController">
    <children>
-      <Text id="lbl-specific-project" layoutX="183.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Helloooooooooooo" wrappingWidth="194.63554406166077" />
-      <Text id="lbl-specific-project" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="194.63554406166077" />
-      <Label fx:id="totalTasks" prefHeight="94.0" prefWidth="254.0" text="hiiiiiiiiiiiiiiiiiiiiiiiiiiii" />
+      <Text id="lbl-specific-project" fill="WHITE" layoutX="183.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projects" textAlignment="CENTER" wrappingWidth="194.63554406166077" />
+      <Label fx:id="totalTasks" prefHeight="94.0" prefWidth="254.0" text="numberOfTasks" />
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+      <Button mnemonicParsing="false" onAction="#returnToDashboard" text="Back to dashboard" />
       
    </children>
    <padding>
