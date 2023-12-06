@@ -17,31 +17,50 @@ import model.*;
 public class DashboardController implements Initializable
 {   
     @FXML
-    VBox projectVBox;
+    VBox ownedProjectsVBox, sharedProjectsVBox;
 
     @FXML
     private Label dashboardHeader;
 
     ScrumSystem system = ScrumSystem.getInstance();
-    
+
     @Override
     public void initialize(URL arg0, ResourceBundle arg1)
     {
-        ArrayList<Project> currentProjects = system.getCurrentAccountProjects();
-        dashboardHeader.setText("Welcome, " + system.getCurrentAccount().getFirstName() + "!");
-        for (int i=0; i<currentProjects.size(); i++)
-        {
-            Project project = currentProjects.get(i);
-            HBox projectBox = new HBox();
-            projectVBox.getChildren().add(projectBox);
+        ArrayList<Project> accountProjects = system.getCurrentAccountProjects();
+        ArrayList<Project> ownedProjects = new ArrayList<Project>();
+        ArrayList<Project> sharedProjects = new ArrayList<Project>();
 
-            Label label = new Label();
-            label.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        // Populate owned list and shared with me list.
+        for (int i=0; i<accountProjects.size(); i++)
+        {
+            Project currentProject = accountProjects.get(i);
+
+            if (currentProject.getOwner().equals(system.getCurrentAccount()))
+                ownedProjects.add(currentProject);
+            else
+                sharedProjects.add(currentProject);
+        }
+
+        dashboardHeader.setText("Welcome, " + system.getCurrentAccount().getFirstName() + "!");
+        buildProjectVBox(ownedProjects, ownedProjectsVBox);
+        buildProjectVBox(sharedProjects, sharedProjectsVBox);
+    }
+
+    private void buildProjectVBox(ArrayList<Project> projectList, VBox targetVBox)
+    {
+        for (int i=0; i<projectList.size(); i++)
+        {
+            Project project = projectList.get(i);
+            HBox projectBox = new HBox();
+            targetVBox.getChildren().add(projectBox);
+
+            Label projectTitle = new Label();
+            projectTitle.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event)
                 {
                     system.openProject(project);
-                    System.out.println("Opened " + system.getCurrentProject().getTitle());  // TODO App.setRoot
                     try {
                         App.setRoot("project");
                     }
@@ -50,11 +69,11 @@ public class DashboardController implements Initializable
                     }
                 }
             });
-            label.setText(currentProjects.get(i).getTitle());
-            projectBox.getChildren().add(label);
+            projectTitle.setText(project.getTitle());
+            projectBox.getChildren().add(projectTitle);
         }
     }
-    
+
     @FXML
     private void logout() throws IOException
     {
