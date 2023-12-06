@@ -20,7 +20,7 @@ public class DashboardController implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         ScrumSystem system = ScrumSystem.getInstance();
-        lbl_username.setText(system.getCurrentAccount().getUsername());
+        lbl_username.setText("Dashboard");
     }
     
     @FXML
