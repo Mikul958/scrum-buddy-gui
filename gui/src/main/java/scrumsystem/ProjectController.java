@@ -47,7 +47,7 @@ public class ProjectController implements Initializable
             Label columnTitle = new Label();
             columnTitle.setPrefWidth(400);
             columnTitle.getStyleClass().add("columnTitle");             // Changes Title text to black.
-            columnTitle.getStyleClass().add("columnTitleBackground");   // Changes background behind title text to white
+            // columnTitle.getStyleClass().add("columnTitleBackground");   // Changes background behind title text to white
             columnTitle.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event)
