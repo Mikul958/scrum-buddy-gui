@@ -15,3 +15,7 @@
     /* -fx-text-fill: black; */
     -fx-background-color: black;
 }
+
+.projectTitle{
+    -fx-text-fill: Red;
+}
