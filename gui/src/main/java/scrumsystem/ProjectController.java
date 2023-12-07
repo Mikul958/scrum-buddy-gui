@@ -21,9 +21,11 @@ public class ProjectController implements Initializable
     private Label projectTitle, totalTasks;
 
     @FXML
-    HBox columnsHBox;
+    private HBox columnsHBox;
 
-    ScrumSystem system = ScrumSystem.getInstance();
+    private ScrumSystem system = ScrumSystem.getInstance();
+    private Column selectedColumn = null;
+    private Task selectedTask = null;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1)
@@ -59,7 +61,9 @@ public class ProjectController implements Initializable
                     public void handle(MouseEvent event)
                     {
                         // TODO add code to change screen and view a task
-                        System.out.println("clicked on\n" + task);
+                        selectedColumn = column;
+                        selectedTask = task;
+                        System.out.println("selected task\n" + selectedTask + "\nin column\n" + selectedColumn);
                     }
                 });
                 taskName.setText(task.getName());
