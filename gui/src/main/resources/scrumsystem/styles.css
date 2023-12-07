@@ -12,10 +12,17 @@
 } 
 
 .unique{
-    /* -fx-text-fill: black; */
-    -fx-background-color: black;
+    -fx-background-color: white;
 }
 
 .projectTitle{
-    -fx-text-fill: Red;
+    -fx-text-fill: black;
+}
+
+.columnTitle{
+    -fx-text-fill: black;
+}
+
+.taskTitle{
+    -fx-text-fill: black;
 }
