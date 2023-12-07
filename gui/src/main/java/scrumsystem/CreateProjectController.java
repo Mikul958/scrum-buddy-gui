@@ -38,4 +38,25 @@ public class CreateProjectController implements Initializable
     {
         App.setRoot("dashboard");
     }
+
+    @FXML
+    private void createProject() throws IOException
+    {
+        String title = titleBox.getText();
+        Category category = (Category)categoryBox.getValue();
+
+        if (title == null || title.equals(""))
+        {
+            System.out.println("TITLE_NULL"); // TODO set label
+            return;
+        }
+        if (category == null)
+        {
+            System.out.println("CATEGORY_NULL"); // TODO set label
+            return;
+        }
+
+        ScrumSystem.getInstance().createProject(title, category);
+        App.setRoot("dashboard");
+    }
 }

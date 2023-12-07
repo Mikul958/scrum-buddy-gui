@@ -16,12 +16,12 @@
       <URL value="@styles.css" />
    </stylesheets>
    <children>
-      <TextField fx:id="titleBox" />
+      <TextField fx:id="titleBox" text="" />
       <ChoiceBox fx:id="categoryBox" prefWidth="150.0" />
       <HBox prefHeight="17.0" prefWidth="500.0">
          <children>
             <Button mnemonicParsing="false" onAction="#backToDashboard" text="Cancel" />
-            <Button mnemonicParsing="false" text="Create!" />
+            <Button mnemonicParsing="false" onAction="#createProject" text="Create!" />
          </children>
       </HBox>
    </children>
