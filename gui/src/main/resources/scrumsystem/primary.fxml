@@ -18,9 +18,9 @@
          <font>
             <Font size="24.0" />
          </font></Label>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="   Enter your usename" wrappingWidth="234.55418169498444" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="   Enter your username:" wrappingWidth="234.55418169498444" />
       <TextField fx:id="txt_username_box" text="" />
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your password" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your password:" />
       <PasswordField fx:id="txt_password_box" text="" />
       <Label fx:id="errorBox" text="ERROR_LOGIN" visible="false">
          <font>
