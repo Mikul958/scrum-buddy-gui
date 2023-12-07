@@ -39,6 +39,7 @@ public class ProjectController implements Initializable
             // Create VBox for current column and add it to outer HBox
             Column column = currentProject.getColumns().get(i);
             VBox columnVBox = new VBox();
+            columnVBox.setMaxWidth(200);
             columnsHBox.getChildren().add(columnVBox);
 
             // Add title to column.
