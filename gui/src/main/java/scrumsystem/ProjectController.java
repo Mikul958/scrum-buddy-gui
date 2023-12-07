@@ -40,14 +40,14 @@ public class ProjectController implements Initializable
             // Create VBox for current column and add it to outer HBox
             Column column = currentProject.getColumns().get(i);
             VBox columnVBox = new VBox();
-            columnVBox.setPrefWidth(400);
+            columnVBox.setPrefWidth(200);
             columnsHBox.getChildren().add(columnVBox);
 
             // Column Title VBox
             Label columnTitle = new Label();
             columnTitle.setPrefWidth(400);
-            columnTitle.getStyleClass().add("columnTitle"); //Changes Title text to black.
-            columnTitle.getStyleClass().add("columnTitleBackground");   //Changes background behind title text to white
+            columnTitle.getStyleClass().add("columnTitle");             // Changes Title text to black.
+            columnTitle.getStyleClass().add("columnTitleBackground");   // Changes background behind title text to white
             columnTitle.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event)
