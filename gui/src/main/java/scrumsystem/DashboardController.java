@@ -75,6 +75,12 @@ public class DashboardController implements Initializable
     }
 
     @FXML
+    private void createProject() throws IOException
+    {
+        App.setRoot("createproject");
+    }
+
+    @FXML
     private void logout() throws IOException
     {
         ScrumSystem.getInstance().saveData();

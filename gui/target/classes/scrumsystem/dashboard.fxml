@@ -28,6 +28,7 @@
             <Insets left="20.0" right="20.0" />
          </VBox.margin>
       </HBox>
+      <Button mnemonicParsing="false" onAction="#createProject" text="New Project" />
       <Button mnemonicParsing="false" onAction="#logout" text="Log Out" />
       
    </children>
