@@ -43,6 +43,7 @@ public class ProjectController implements Initializable
 
             // Add title to column.
             Label columnTitle = new Label();
+            columnTitle.getStyleClass().add("columnTitle"); //here0
             columnTitle.setText(column.getTitle());
             columnVBox.getChildren().add(columnTitle);
 
@@ -56,6 +57,7 @@ public class ProjectController implements Initializable
 
                 // Add title to task box.
                 Label taskName = new Label();
+                taskName.getStyleClass().add("taskTitle");
                 taskName.setOnMouseClicked(new EventHandler<MouseEvent>() {
                     @Override
                     public void handle(MouseEvent event)
