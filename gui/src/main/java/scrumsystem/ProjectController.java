@@ -18,7 +18,7 @@ import model.*;
 public class ProjectController implements Initializable
 {
     @FXML
-    private Label projectTitle, totalTasks;
+    private Label projectTitle, totalTasks, columnStatus;
 
     @FXML
     private HBox columnsHBox;
@@ -33,6 +33,7 @@ public class ProjectController implements Initializable
         Project currentProject = system.getCurrentProject();
         projectTitle.setText("Project: " + currentProject.getTitle());
         totalTasks.setText("Number of tasks: " + currentProject.getTotalTasks());
+        columnStatus.setText("No column selected");
 
         for(int i = 0; i < currentProject.getColumns().size(); i++)
         {
@@ -45,6 +46,15 @@ public class ProjectController implements Initializable
             // Add title to column.
             Label columnTitle = new Label();
             columnTitle.getStyleClass().add("columnTitle"); //here0
+            columnTitle.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event)
+                {
+                    // Select a column to edit or add to and update status.
+                    selectedColumn = column;
+                    columnStatus.setText("Column \"" + selectedColumn.getTitle() + "\" selected");
+                }
+            });
             columnTitle.setText(column.getTitle());
             columnVBox.getChildren().add(columnTitle);
 
@@ -66,13 +76,27 @@ public class ProjectController implements Initializable
                         // TODO add code to change screen and view a task
                         selectedColumn = column;
                         selectedTask = task;
-                        System.out.println("selected task\n" + selectedTask + "\nin column\n" + selectedColumn);
+                        System.out.println("\nSELECTED TASK:\n" + selectedTask.getName() + "\nIN COLUMN:\n" + selectedColumn.getTitle());
                     }
                 });
                 taskName.setText(task.getName());
                 taskHBox.getChildren().add(taskName);
             }
         }
+    }
+
+    @FXML
+    void addColumn(ActionEvent event)
+    {
+        // TODO switch to add column screen
+        System.out.println("Clicked add column");
+    }
+
+    @FXML
+    void addTaskToColumn(ActionEvent event)
+    {
+        // TODO switch to add task screen (using selected column).
+        System.out.println("Clicked add task");
     }
 
     @FXML
