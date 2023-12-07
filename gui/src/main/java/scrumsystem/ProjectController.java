@@ -44,7 +44,7 @@ public class ProjectController implements Initializable
             columnTitle.setText(column.getTitle());
             columnVBox.getChildren().add(columnTitle);
 
-            // Todo add task HBoxes to column, use inner for-loop.
+            // Add task HBoxes to column.
             for (int j=0; j<column.getTasks().size(); j++)
             {
                 // Create HBox for current Task and add it to Column's VBox
@@ -54,6 +54,14 @@ public class ProjectController implements Initializable
 
                 // Add title to task box.
                 Label taskName = new Label();
+                taskName.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event)
+                    {
+                        // TODO add code to change screen and view a task
+                        System.out.println("clicked on\n" + task);
+                    }
+                });
                 taskName.setText(task.getName());
                 taskHBox.getChildren().add(taskName);
             }
