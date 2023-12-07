@@ -56,6 +56,7 @@ public class DashboardController implements Initializable
             targetVBox.getChildren().add(projectBox);
 
             Label projectTitle = new Label();
+            projectTitle.getStyleClass().add("projectTitle"); //here
             projectTitle.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event)
