@@ -33,6 +33,6 @@
 
 .taskListBackground{
     -fx-background-color: white;
-    -ms-flex-wrap: wrap;
+    /* -ms-flex-wrap: wrap; */
 }
 
