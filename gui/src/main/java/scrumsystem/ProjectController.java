@@ -45,7 +45,8 @@ public class ProjectController implements Initializable
 
             // Add title to column.
             Label columnTitle = new Label();
-            columnTitle.getStyleClass().add("columnTitle"); //here0
+            columnTitle.getStyleClass().add("columnTitleBackground");
+            columnTitle.getStyleClass().add("columnTitle"); 
             columnTitle.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event)
@@ -64,6 +65,7 @@ public class ProjectController implements Initializable
                 // Create HBox for current Task and add it to Column's VBox
                 Task task = column.getTasks().get(j);
                 HBox taskHBox = new HBox();
+                taskHBox.getStyleClass().add("taskListBackground"); 
                 columnVBox.getChildren().add(taskHBox);
 
                 // Add title to task box.

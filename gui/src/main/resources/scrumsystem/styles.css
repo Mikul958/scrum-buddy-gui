@@ -26,3 +26,12 @@
 .taskTitle{
     -fx-text-fill: black;
 }
+
+.columnTitleBackground{
+    -fx-background-color: white;
+}
+
+.taskListBackground{
+    -fx-background-color: white;
+}
+
