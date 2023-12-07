@@ -10,3 +10,8 @@
     -fx-background-color: black;
     -fx-text-fill: white;
 } 
+
+.unique{
+    /* -fx-text-fill: black; */
+    -fx-background-color: black;
+}
