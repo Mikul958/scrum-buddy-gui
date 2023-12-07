@@ -16,8 +16,8 @@
       <URL value="@styles.css" />
    </stylesheets>
    <children>
-      <TextField fx:id="titleBox" text="" />
-      <ChoiceBox fx:id="categoryBox" prefWidth="150.0" />
+      <TextField fx:id="titleBox" maxWidth="400.0" minWidth="0.0" prefHeight="46.0" prefWidth="100.0" text="" />
+      <ChoiceBox fx:id="categoryBox" prefHeight="46.0" prefWidth="400.0" />
       <HBox prefHeight="17.0" prefWidth="500.0">
          <children>
             <Button mnemonicParsing="false" onAction="#backToDashboard" text="Cancel" />

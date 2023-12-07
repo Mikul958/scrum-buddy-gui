@@ -22,7 +22,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 650, 550);
+        scene = new Scene(loadFXML("primary"), 960, 540);
         stage.setScene(scene);
         stage.setTitle("Scrum Buddy vBeta1");
         stage.show();

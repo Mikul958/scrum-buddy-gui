@@ -6,12 +6,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" minWidth="648.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrumsystem.SignUpController">
+<VBox alignment="CENTER" minWidth="648.0" prefHeight="681.0" prefWidth="960.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrumsystem.SignUpController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -24,70 +24,61 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <FlowPane hgap="196.0" prefHeight="25.0" prefWidth="385.0">
+      <HBox prefHeight="8.0" prefWidth="960.0" spacing="204.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" />
          </children>
          <padding>
-            <Insets left="20.0" />
+            <Insets left="176.0" />
          </padding>
-      </FlowPane>
-      <FlowPane hgap="40.0" prefHeight="45.0" prefWidth="568.0">
+      </HBox>
+      <HBox alignment="TOP_CENTER" spacing="40.0">
          <children>
             <TextField fx:id="textFirstName" />
             <TextField fx:id="textUsername" />
          </children>
-         <VBox.margin>
-            <Insets left="20.0" right="20.0" />
-         </VBox.margin>
-      </FlowPane>
-      <FlowPane hgap="198.0" prefHeight="0.0" prefWidth="200.0">
+      </HBox>
+      <HBox prefHeight="0.0" prefWidth="960.0" spacing="200.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name:" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
          </children>
          <padding>
-            <Insets left="20.0" />
+            <Insets left="176.0" />
          </padding>
-      </FlowPane>
-      <FlowPane hgap="40.0" prefHeight="45.0" prefWidth="568.0">
+      </HBox>
+      <HBox alignment="TOP_CENTER" spacing="40.0">
          <children>
             <TextField fx:id="textLastName" />
             <PasswordField fx:id="textPassword" />
          </children>
-         <VBox.margin>
-            <Insets left="20.0" right="20.0" />
-         </VBox.margin>
-      </FlowPane>
-      <FlowPane hgap="248.0" prefHeight="0.0" prefWidth="200.0">
+      </HBox>
+      <HBox prefHeight="9.0" prefWidth="960.0" spacing="248.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password:" />
          </children>
          <padding>
-            <Insets left="20.0" />
+            <Insets left="176.0" />
          </padding>
-      </FlowPane>
-      <FlowPane hgap="40.0" prefHeight="60.0" prefWidth="568.0">
+      </HBox>
+      <HBox alignment="TOP_CENTER" spacing="40.0">
          <children>
             <TextField fx:id="textEmail" />
             <PasswordField fx:id="textPasswordConfirm" />
          </children>
-         <padding>
-            <Insets left="20.0" right="20.0" />
-         </padding>
-      </FlowPane>
+      </HBox>
       <Label fx:id="errorBox" text="ERROR_SIGNUP" visible="false">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <FlowPane alignment="TOP_CENTER" hgap="20.0" prefHeight="0.0" prefWidth="200.0">
+      <HBox alignment="TOP_CENTER" spacing="20.0">
          <children>
             <Button mnemonicParsing="false" onAction="#backToLogin" prefWidth="109.0" text="Back" />
             <Button mnemonicParsing="false" onAction="#signUp" text="Sign Up!" />
          </children>
-      </FlowPane>
+      </HBox>
    </children>
 </VBox>
