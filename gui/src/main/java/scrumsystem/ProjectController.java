@@ -108,6 +108,11 @@ public class ProjectController implements Initializable
     {
         // TODO switch to add task screen (using selected column).
         System.out.println("Clicked add task");
+        if (selectedColumn == null)
+        {
+            columnStatus.setText("Please select a column first");
+            return;
+        }
         App.setRoot("addtask");
     }
 
