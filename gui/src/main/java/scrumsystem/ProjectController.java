@@ -81,6 +81,12 @@ public class ProjectController implements Initializable
                         selectedColumn = column;
                         selectedTask = task;
                         System.out.println("\nSELECTED TASK:\n" + selectedTask.getName() + "\nIN COLUMN:\n" + selectedColumn.getTitle());
+                        try {
+                            App.setRoot("viewtask");
+                        }
+                        catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
                 });
                 taskName.setText(task.getName());
@@ -90,17 +96,19 @@ public class ProjectController implements Initializable
     }
 
     @FXML
-    void addColumn(ActionEvent event)
+    void addColumn(ActionEvent event) throws IOException
     {
         // TODO switch to add column screen
         System.out.println("Clicked add column");
+        App.setRoot("addcolumn");
     }
 
     @FXML
-    void addTaskToColumn(ActionEvent event)
+    void addTaskToColumn(ActionEvent event) throws IOException
     {
         // TODO switch to add task screen (using selected column).
         System.out.println("Clicked add task");
+        App.setRoot("addtask");
     }
 
     @FXML
