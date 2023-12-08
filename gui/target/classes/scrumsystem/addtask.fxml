@@ -10,7 +10,7 @@
       <URL value="@styles.css" />
    </stylesheets>
    <children>
-      <Button fx:id="cancelAddTask" mnemonicParsing="false" onAction="#cancelAddTask" text="Cancel" />
+      <Button mnemonicParsing="false" onAction="#backToProject" text="Cancel" />
    </children>
 
 </VBox>

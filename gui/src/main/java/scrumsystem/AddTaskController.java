@@ -9,32 +9,26 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import model.ScrumSystem;
+
+import model.*;
 
 public class AddTaskController implements Initializable
 {
-
     ScrumSystem system = ScrumSystem.getInstance();
 
-    @FXML
-    private Button cancelAddTask;
 
-    @FXML
-    private Label labelColumnName;
 
-                                    //Selected column is null
-    // private String selectColumn = ProjectController.selectedColumn.getTitle();
+    private Column currentCol = ProjectController.selectedColumn;
 
     @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-    
-        labelColumnName.setText("Current Column: ");
-
+    public void initialize(URL arg0, ResourceBundle arg1)
+    {
+        
     }
     
     @FXML
-    void cancelAddTask(ActionEvent event) throws IOException{
+    void backToProject() throws IOException
+    {
         App.setRoot("project");
     }
-
 }
