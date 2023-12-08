@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import model.ScrumSystem;
 
 public class AddTaskController implements Initializable
@@ -18,10 +19,16 @@ public class AddTaskController implements Initializable
     @FXML
     private Button cancelAddTask;
 
+    @FXML
+    private Label labelColumnName;
+
+                                    //Selected column is null
+    // private String selectColumn = ProjectController.selectedColumn.getTitle();
+
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
     
-        //TODO
+        labelColumnName.setText("Current Column: ");
 
     }
     
