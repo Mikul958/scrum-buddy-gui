@@ -56,7 +56,7 @@ public class CreateProjectController implements Initializable
         }
         if (category == null)
         {
-            errorBox.setText("*Please enter a category");
+            errorBox.setText("*Please select a category");
             errorBox.setVisible(true);
             return;
         }

@@ -81,10 +81,8 @@ public class ProjectController implements Initializable
                     @Override
                     public void handle(MouseEvent event)
                     {
-                        // TODO add code to change screen and view a task
                         selectedColumn = column;
                         selectedTask = task;
-                        System.out.println("\nSELECTED TASK:\n" + selectedTask.getName() + "\nIN COLUMN:\n" + selectedColumn.getTitle());
                         try {
                             App.setRoot("viewtask");
                         }

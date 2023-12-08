@@ -6,6 +6,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox alignment="CENTER" prefHeight="540.0" prefWidth="960.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrumsystem.ProjectController">
    <children>
@@ -15,7 +16,10 @@
          <padding>
             <Insets left="50.0" />
          </padding></HBox>
-      <Label fx:id="columnStatus" text="STATUS_COL_SELECT" />
+      <Label fx:id="columnStatus" text="STATUS_COL_SELECT">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
       <HBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="920.0" spacing="20.0">
          <children>
             <Button mnemonicParsing="false" onAction="#addColumn" text="Add Column" />
