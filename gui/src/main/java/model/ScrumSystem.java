@@ -242,7 +242,11 @@ public class ScrumSystem
      */
     public boolean removeProjectTask(String columnTitle, Task task)
     {
-        return currentProject.removeTask(columnTitle, task);
+        return currentProject.removeTask(columnTitle, task.getName());
+    }
+    public boolean removeProjectTask(Column column, Task task)
+    {
+        return currentProject.removeTask(column, task);
     }
     /**
      * Moves a task in the current project from one specified column to another.

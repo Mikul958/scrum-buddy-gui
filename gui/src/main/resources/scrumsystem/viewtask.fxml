@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <VBox alignment="CENTER" prefHeight="540.0" prefWidth="960.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrumsystem.ViewTaskController">
    
    <stylesheets>
       <URL value="@styles.css" />
    </stylesheets>
+   <children>
+      <Label text="Viewing Task">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+      <HBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="960.0">
+         <children>
+            <Text fill="#ffb3b3" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Name: " />
+            <Label fx:id="taskName" text="TASK_NAME" />
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="9.0" prefWidth="960.0">
+         <children>
+            <Text fill="#ffb3b3" strokeType="OUTSIDE" strokeWidth="0.0" text="In Column: " />
+            <Label fx:id="columnName" text="COLUMN_NAME" />
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="960.0">
+         <children>
+            <Text fill="#ffb3b3" strokeType="OUTSIDE" strokeWidth="0.0" text="Priority: " />
+            <Label fx:id="priority" text="PRIORITY" />
+         </children>
+      </HBox>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="109.0" prefWidth="960.0" spacing="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#backToProject" prefWidth="137.0" text="Back" />
+            <Button mnemonicParsing="false" onAction="#deleteTask" text="Delete Task" />
+         </children>
+      </HBox>
+   </children>
 
 </VBox>

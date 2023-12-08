@@ -24,8 +24,10 @@ public class ProjectController implements Initializable
     private HBox columnsHBox;
 
     private ScrumSystem system = ScrumSystem.getInstance();
-    private Column selectedColumn = null;
-    private Task selectedTask = null;
+
+    // Task/column that the user has selected.
+    protected static Column selectedColumn;
+    protected static Task selectedTask;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1)
@@ -34,6 +36,8 @@ public class ProjectController implements Initializable
         projectTitle.setText("Project: " + currentProject.getTitle());
         totalTasks.setText("Number of tasks: " + currentProject.getTotalTasks());
         columnStatus.setText("No column selected");
+        selectedColumn = null;
+        selectedTask = null;
 
         for(int i = 0; i < currentProject.getColumns().size(); i++)
         {
