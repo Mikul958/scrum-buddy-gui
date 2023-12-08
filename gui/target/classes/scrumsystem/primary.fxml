@@ -21,7 +21,7 @@
       <TextField fx:id="txt_username_box" maxWidth="600.0" text="" />
       <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your password:" />
       <PasswordField fx:id="txt_password_box" maxWidth="600.0" text="" />
-      <Label fx:id="errorBox" prefHeight="160.0" prefWidth="103.0" text="ERROR_LOGIN" visible="false">
+      <Label fx:id="errorBox" prefHeight="160.0" text="ERROR_LOGIN" visible="false">
          <font>
             <Font size="16.0" />
          </font>
