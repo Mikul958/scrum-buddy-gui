@@ -318,7 +318,16 @@ public class Project
         if (removeFrom == null)
             return false;
         return removeFrom.removeTask(task);
-        
+    }
+    /**
+     * Removes the specified task from the specified column.
+     * @param column The column to remove task from.
+     * @param task The task to be removed.
+     * @return true if the column exists and the task exists in that column.
+     */
+    public boolean removeTask(Column column, Task task)
+    {
+        return column.removeTask(task);  
     }
     /**
      * Moves a task from one specified column to another.
