@@ -22,6 +22,7 @@ public class AddColumnController implements Initializable
     public void initialize(URL arg0, ResourceBundle arg1){
 
         labelProjectName.setText("Current Project: "+system.getCurrentProject().getTitle());
+        
 
     }
 

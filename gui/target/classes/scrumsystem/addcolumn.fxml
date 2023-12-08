@@ -13,7 +13,7 @@
    </stylesheets>
    <children>
       <Label fx:id="labelProjectName" text="labelProjectName" />
-      <TextField prefHeight="46.0" prefWidth="519.0" />
+      <TextField id="columnNameField" prefHeight="46.0" prefWidth="519.0" />
       <Button mnemonicParsing="false" onAction="#cancelAddColumn" text="Cancel" />
    </children>
 
