@@ -235,6 +235,16 @@ public class ScrumSystem
         return currentProject.addTask(columnTitle, name, priority);
     }
     /**
+     * Adds a task to the specified column in the current project.
+     * @param column Column to add task to.
+     * @param name The name of the new task.
+     * @param priority The priority of the new task.
+     */
+    public void addProjectTask(Column column, String name, int priority)
+    {
+        currentProject.addTask(column, name, priority);
+    }
+    /**
      * Removes a task from the specified column in the current project, if the column exists.
      * @param columnTitle Title of the column to remove task from.
      * @param task The task to be removed, must be obtained from UI before calling.

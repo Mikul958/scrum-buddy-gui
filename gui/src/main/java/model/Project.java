@@ -291,6 +291,16 @@ public class Project
         return true;
     }
     /**
+     * Adds a task to the specified column, with the specified name and priority, if the column exists.
+     * @param column Column to add task to.
+     * @param name The name of the new task.
+     * @param priority The priority of the new task.
+     */
+    public void addTask(Column column, String name, int priority)
+    {
+        column.addTask(name, priority);
+    }
+    /**
      * Removes the first task with the specified name from the specified column.
      * @param columnTitle Title of the column to remove task from.
      * @param taskName The name of the task to be removed.
