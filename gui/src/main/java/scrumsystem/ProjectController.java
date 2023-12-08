@@ -98,13 +98,13 @@ public class ProjectController implements Initializable
     }
 
     @FXML
-    void addColumn(ActionEvent event) throws IOException
+    private void addColumn() throws IOException
     {
         App.setRoot("addcolumn");
     }
 
     @FXML
-    void addTaskToColumn(ActionEvent event) throws IOException
+    private void addTaskToColumn() throws IOException
     {
         if (selectedColumn == null)
         {
@@ -112,6 +112,19 @@ public class ProjectController implements Initializable
             return;
         }
         App.setRoot("addtask");
+    }
+
+    @FXML
+    private void deleteColumn() throws IOException
+    {
+        System.out.println("clicked");
+        if (selectedColumn == null)
+        {
+            columnStatus.setText("*Please select a column first");
+            return;
+        }
+        system.removeProjectColumn(selectedColumn);
+        App.setRoot("project");  // Refresh page.
     }
 
     @FXML

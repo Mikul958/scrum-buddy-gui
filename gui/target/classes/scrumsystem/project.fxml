@@ -26,6 +26,7 @@
             <Button mnemonicParsing="false" onAction="#addTaskToColumn" prefWidth="147.0" text="Add Task" />
          </children>
       </HBox>
+      <Button mnemonicParsing="false" onAction="#deleteColumn" text="Delete Column" />
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
             <Button mnemonicParsing="false" onAction="#returnToDashboard" text="Back" />

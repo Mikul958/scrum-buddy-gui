@@ -211,6 +211,15 @@ public class ScrumSystem
         return currentProject.removeColumn(columnTitle);
     }
     /**
+     * Removes the specified column from the current project, if it exists.
+     * @param column The column to be removed.
+     * @return true if the specified column existed in the project.
+     */
+    public boolean removeProjectColumn(Column column)
+    {
+        return currentProject.removeColumn(column);
+    }
+    /**
      * Moves the column at index from to index to in the current project, shifting all other columns as necessary.
      * @param from The index of the column to be moved.
      * @param to The index that the column will be moved to.
