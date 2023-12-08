@@ -50,13 +50,13 @@ public class CreateProjectController implements Initializable
 
         if (title == null || title.equals(""))
         {
-            errorBox.setText("Please enter a title");
+            errorBox.setText("*Please enter a title");
             errorBox.setVisible(true);
             return;
         }
         if (category == null)
         {
-            errorBox.setText("Please enter a category");
+            errorBox.setText("*Please enter a category");
             errorBox.setVisible(true);
             return;
         }

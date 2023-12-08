@@ -6,28 +6,36 @@ import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import model.ScrumSystem;
 
-public class AddColumnController implements Initializable
+public class AddColumnController
 {
+    @FXML
+    private TextField titleBox;
+    
+    @FXML
+    private Label errorBox;
 
     @FXML
-    private Label labelProjectName;
-
-    ScrumSystem system = ScrumSystem.getInstance();
-
-    @FXML
-    public void initialize(URL arg0, ResourceBundle arg1){
-
-        labelProjectName.setText("Current Project: "+system.getCurrentProject().getTitle());
-        
-
+    void backToProject(ActionEvent event) throws IOException
+    {
+        App.setRoot("project");
     }
 
     @FXML
-    void cancelAddColumn(ActionEvent event) throws IOException{
+    private void addColumn() throws IOException
+    {
+        String columnTitle = titleBox.getText();
+        
+        if (columnTitle == null || columnTitle.equals(""))
+        {
+            errorBox.setText("*Please enter a column title");
+            errorBox.setVisible(true);
+            return;
+        }
+        ScrumSystem.getInstance().addProjectColumn(columnTitle);
         App.setRoot("project");
     }
 }

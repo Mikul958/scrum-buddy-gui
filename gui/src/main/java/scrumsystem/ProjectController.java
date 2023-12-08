@@ -102,19 +102,15 @@ public class ProjectController implements Initializable
     @FXML
     void addColumn(ActionEvent event) throws IOException
     {
-        // TODO switch to add column screen
-        System.out.println("Clicked add column");
         App.setRoot("addcolumn");
     }
 
     @FXML
     void addTaskToColumn(ActionEvent event) throws IOException
     {
-        // TODO switch to add task screen (using selected column).
-        System.out.println("Clicked add task");
         if (selectedColumn == null)
         {
-            columnStatus.setText("Please select a column first");
+            columnStatus.setText("*Please select a column first");
             return;
         }
         App.setRoot("addtask");
