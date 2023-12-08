@@ -26,8 +26,8 @@
       </Text>
       <HBox prefHeight="8.0" prefWidth="960.0" spacing="204.0">
          <children>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
          </children>
          <padding>
             <Insets left="176.0" />
