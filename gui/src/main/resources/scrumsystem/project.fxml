@@ -11,7 +11,7 @@
    <children>
       <Label fx:id="projectTitle" alignment="TOP_CENTER" prefHeight="31.0" prefWidth="389.0" text="PROJECT_TITLE" />
       <Label fx:id="totalTasks" alignment="TOP_CENTER" prefHeight="0.0" prefWidth="254.0" text="NUM_TASKS" />
-      <HBox fx:id="columnsHBox" prefHeight="100.0" spacing="50.0" >
+      <HBox fx:id="columnsHBox" prefHeight="100.0" spacing="50.0">
          <padding>
             <Insets left="50.0" />
          </padding></HBox>
@@ -26,6 +26,9 @@
          <children>
             <Button mnemonicParsing="false" onAction="#returnToDashboard" text="Back" />
          </children>
+         <padding>
+            <Insets left="40.0" />
+         </padding>
       </HBox>
       
    </children>

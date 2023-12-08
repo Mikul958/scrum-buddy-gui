@@ -6,10 +6,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="432.0" prefWidth="540.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrumsystem.DashboardController">
+<VBox alignment="CENTER" prefHeight="540.0" prefWidth="960.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="scrumsystem.DashboardController">
    <children>
-      <Label fx:id="dashboardHeader" alignment="CENTER" prefHeight="50.0" prefWidth="696.0" text="DASHBOARD_HEADER" />
+      <Label fx:id="dashboardHeader" alignment="CENTER" prefHeight="50.0" prefWidth="696.0" text="DASHBOARD_HEADER">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
       <HBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="500.0" spacing="76.0">
          <children>
             <Label alignment="TOP_CENTER" prefWidth="152.0" text="My Projects" />
