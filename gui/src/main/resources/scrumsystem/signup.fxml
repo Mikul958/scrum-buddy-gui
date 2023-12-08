@@ -19,15 +19,15 @@
       <URL value="@styles.css" />
    </stylesheets>
    <children>
-      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up For Scrum Buddy!">
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up For Scrum Buddy!" wrappingWidth="416.654296875">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
       <HBox prefHeight="8.0" prefWidth="960.0" spacing="204.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" />
          </children>
          <padding>
             <Insets left="176.0" />
@@ -41,8 +41,8 @@
       </HBox>
       <HBox prefHeight="0.0" prefWidth="960.0" spacing="200.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name:" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name:" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
          </children>
          <padding>
             <Insets left="176.0" />
@@ -56,8 +56,8 @@
       </HBox>
       <HBox prefHeight="9.0" prefWidth="960.0" spacing="248.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password:" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password:" />
          </children>
          <padding>
             <Insets left="176.0" />

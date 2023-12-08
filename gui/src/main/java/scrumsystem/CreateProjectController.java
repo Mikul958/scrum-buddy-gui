@@ -24,6 +24,9 @@ public class CreateProjectController implements Initializable
 
     @FXML
     private ChoiceBox<Category> categoryBox;
+
+    @FXML
+    private Label errorBox;
     
     @Override
     public void initialize(URL arg0, ResourceBundle arg1)
@@ -47,12 +50,14 @@ public class CreateProjectController implements Initializable
 
         if (title == null || title.equals(""))
         {
-            System.out.println("TITLE_NULL"); // TODO set label
+            errorBox.setText("Please enter a title");
+            errorBox.setVisible(true);
             return;
         }
         if (category == null)
         {
-            System.out.println("CATEGORY_NULL"); // TODO set label
+            errorBox.setText("Please enter a category");
+            errorBox.setVisible(true);
             return;
         }
 
