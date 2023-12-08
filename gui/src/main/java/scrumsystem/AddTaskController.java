@@ -13,7 +13,7 @@ import model.ScrumSystem;
 public class AddTaskController implements Initializable
 {
 
-    private ScrumSystem system = ScrumSystem.getInstance();
+    ScrumSystem system = ScrumSystem.getInstance();
 
     @FXML
     private Button cancelAddTask;
