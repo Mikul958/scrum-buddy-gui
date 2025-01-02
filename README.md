@@ -1,1 +1,5 @@
-# project-application-gui
+# Scrum Buddy (with UI)
+
+Scrum buddy is a project planning and scrum desktop application intended to aid students with their projects. It allows for the creation of accounts as well as projects tied to those accounts, as well as the invitation of other accounts to work on a given project. Projects are made of a collection of columns, which themselves house collections of tasks, and tasks can be added, deleted, moved, and commented on at any time. The application was created by Michael Pikula, Miles Wedeking, Al Paccico, and Cade Phillips as part of a Software Engineering course, for the purpose of understanding object-oriented programming, design patterns, and UX best practices.
+
+After the completion of the backend, Scrum Buddy was given a basic front end using JavaFX that enables core functionality, including the creation/logging in of accounts, creation of projects, and addition of tasks/columns to projects. However, due to time constraints, this front end is in a very early stage and by no means showcases the full potential of the application.
